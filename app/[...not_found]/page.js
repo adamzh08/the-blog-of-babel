@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
-export default function Home() {
-  const words = ["Hello, World!", "Welcome to the Blog of Babel!", "Enjoy."];
+export default function NotFoundCatchAll() {
+  const words = ["What are you trying to do?", "Page not found", "You're not welcome here!", "Error 404",];
   const [currentWord, setCurrentWord] = useState("");
   const [i, setI] = useState(0);
   const [j, setJ] = useState(0);

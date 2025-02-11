@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
+
+const IBMPlexMono = localFont({ src: '../public/fonts/IBM_Plex_Mono/IBMPlexMono-Medium.ttf' })
+const pressStartToPlay = localFont({ src: '../public/fonts/Press_Start_2P/PressStart2P-Regular.ttf' })
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +28,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-glitch`}
-      >
-        {children}
+      <body className={`${IBMPlexMono.className} antialiased text-glitch text-glitch-duration-slow `}>
+        <nav className="flex justify-between items-center p-4 bg-black text-white">
+          <div className="text-xl font-bold">
+            <a href="/">My Blog</a>
+          </div>
+          <div className="space-x-4">
+            <a href="/" className="hover:underline">Home</a>
+            <a href="/about" className="hover:underline">About</a>
+            <a href="/contact" className="hover:underline">Contact</a>
+          </div>
+        </nav>
+        <div className="bg-anime bg-fixed bg-center">{children}</div>
       </body>
     </html>
   );
