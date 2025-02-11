@@ -49,16 +49,9 @@ export default function Home() {
     return () => clearTimeout(timeout);
   }, [currentWord, i, j, words, isTyping, isErasing, delay, eraseDelay]);
 
-  useEffect(() => {
-    document.body.classList.add('overflow-hidden');
-    return () => {
-      document.body.classList.remove('overflow-hidden');
-    };
-  }, []);
-
   return (
     <div>
-      <div className="flex items-center justify-center h-screen overflow-hidden">
+      <div className="flex items-center justify-center h-screen">
         <h1 id="typewriter" className="text-4xl font-bold whitespace-pre-line text-center text-[#00ff00]">
           <span className='bg-black'>
             {currentWord}
