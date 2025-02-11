@@ -28,18 +28,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${IBMPlexMono.className} antialiased text-glitch text-glitch-duration-slow relative overflow-hidden`}>
-        <nav className="flex justify-between items-center p-4 bg-black text-white">
-          <div className="text-xl font-bold">
-            <a href="/">My Blog</a>
+      <body className={`${IBMPlexMono.className} antialiased bg-anime bg-fixed bg-center text-glitch text-glitch-duration-slow relative`}>
+        <div class="grid grid-cols-1 h-screen">
+          <div class="bg-black text-white p-4 h-16">
+            <nav className="flex justify-between items-center">
+              <div className="text-xl font-bold">
+                <a href="/">My Blog</a>
+              </div>
+              <div className="space-x-4">
+                <a href="/" className="hover:underline">Home</a>
+                <a href="/about" className="hover:underline">About</a>
+                <a href="/contact" className="hover:underline">Contact</a>
+              </div>
+            </nav>
           </div>
-          <div className="space-x-4">
-            <a href="/" className="hover:underline">Home</a>
-            <a href="/about" className="hover:underline">About</a>
-            <a href="/contact" className="hover:underline">Contact</a>
-          </div>
-        </nav>
-        <div className="bg-anime bg-fixed bg-center">{children}</div>
+          {children}
+        </div>
       </body>
     </html>
   );
