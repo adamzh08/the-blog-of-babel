@@ -29,8 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${IBMPlexMono.className} antialiased bg-anime bg-fixed bg-center text-glitch text-glitch-duration-slow relative`}>
-        <div class="grid grid-cols-1 h-screen">
-          <div class="bg-black text-white p-4 h-16">
+        <div className="grid grid-cols-1 h-screen">
+          <div className="bg-black text-white p-4 h-16">
             <nav className="flex justify-between items-center">
               <div className="text-xl font-bold">
                 <a href="/">My Blog</a>
