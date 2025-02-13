@@ -73,7 +73,7 @@ export default {
 			},
 		},
 		backgroundImage: {
-			'anime': "url('../public/photos/2.jpg')",
+			'anime': "url('../public/photos/2.webp')",
 		},
 	},
 	plugins: [require("tailwindcss-animate"), require("@designbycode/tailwindcss-text-glitch"),],
