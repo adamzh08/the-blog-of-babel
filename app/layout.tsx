@@ -39,7 +39,7 @@ export default function RootLayout({
             <a href="/contact" className="hover:underline">Contact</a>
           </div>
         </nav>
-        <div className="h-screen  bg-anime bg-fixed bg-center">
+        <div className="h-screen bg-anime bg-center">
           {children}
         </div>
       </body>
