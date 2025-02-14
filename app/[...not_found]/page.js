@@ -50,14 +50,12 @@ export default function NotFoundCatchAll() {
   }, [currentWord, i, j, words, isTyping, isErasing, delay, eraseDelay]);
 
   return (
-    <div>
-      <div className="flex items-center justify-center">
-        <h1 id="typewriter" className="text-4xl font-bold whitespace-pre-line text-center text-[#00ff00]">
-          <span className='bg-black'>
-            {currentWord}
-          </span>
-        </h1>
-      </div>
+    <div className="flex items-center justify-center h-full">
+      <h1 id="typewriter" className="text-4xl font-bold whitespace-pre-line text-center text-[#00ff00]">
+        <span className='bg-black'>
+          {currentWord}
+        </span>
+      </h1>
     </div>
   );
 }
